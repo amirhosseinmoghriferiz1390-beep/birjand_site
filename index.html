@@ -1,1 +1,279 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بیرجند من | معرفی شهر بیرجند</title>
 
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(135deg, #173b57, #287c8e);
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 8px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+        .hero {
+            min-height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 20px;
+            background:
+                linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+                url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e")
+                center/cover;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        section {
+            padding: 60px 8%;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .title h2 {
+            font-size: 30px;
+            color: #173b57;
+        }
+
+        .about {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(0,0,0,.1);
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card h3 {
+            color: #287c8e;
+            margin-bottom: 8px;
+        }
+
+        .future {
+            background: #173b57;
+            color: white;
+            text-align: center;
+        }
+
+        .future h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .future p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 18px;
+        }
+
+        footer {
+            background: #102b3d;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 800px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero h2 {
+                font-size: 30px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌆 بیرجند من</h1>
+
+    <nav>
+        <a href="#home">خانه</a>
+        <a href="#about">درباره بیرجند</a>
+        <a href="#places">دیدنی‌ها</a>
+        <a href="#streets">خیابان‌ها</a>
+        <a href="#future">آینده</a>
+    </nav>
+</header>
+
+
+<section class="hero" id="home">
+    <div>
+        <h2>به بیرجند خوش آمدید 🌹</h2>
+        <p>شهری زیبا در قلب خراسان جنوبی</p>
+    </div>
+</section>
+
+
+<section id="about">
+    <div class="title">
+        <h2>درباره بیرجند</h2>
+    </div>
+
+    <div class="about">
+        <p>
+            بیرجند یکی از شهرهای تاریخی و زیبای ایران و مرکز استان خراسان جنوبی است.
+            این شهر با جاذبه‌های تاریخی، فرهنگی و طبیعی خود، یکی از شهرهای دیدنی شرق ایران به شمار می‌رود.
+        </p>
+    </div>
+</section>
+
+
+<section id="places">
+    <div class="title">
+        <h2>📍 مکان‌های دیدنی بیرجند</h2>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1548013146-72479768bada" alt="مکان تاریخی">
+            <div class="card-content">
+                <h3>باغ و عمارت اکبریه</h3>
+                <p>
+                    یکی از بناهای تاریخی و شناخته‌شده بیرجند که معماری و فضای زیبایی دارد.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7" alt="طبیعت">
+            <div class="card-content">
+                <h3>طبیعت بیرجند</h3>
+                <p>
+                    اطراف بیرجند دارای مناظر طبیعی و مناطق زیبایی برای گردش و عکاسی است.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742" alt="معماری">
+            <div class="card-content">
+                <h3>بافت تاریخی</h3>
+                <p>
+                    کوچه‌ها و بناهای قدیمی بیرجند بخشی از هویت تاریخی این شهر هستند.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section id="streets">
+    <div class="title">
+        <h2>🛣️ خیابان‌های بیرجند</h2>
+    </div>
+
+    <div class="about">
+        <p>
+            در این بخش می‌توانیم به‌مرور عکس‌ها و اطلاعات خیابان‌های مختلف بیرجند
+            مانند خیابان مدرس، خیابان‌های مرکزی شهر و دیگر نقاط را اضافه کنیم.
+        </p>
+    </div>
+</section>
+
+
+<section class="future" id="future">
+    <h2>🔮 بیرجند در ۲۰ سال آینده</h2>
+
+    <p>
+        در این قسمت می‌توانیم تصاویر و ویدیوهای خلاقانه‌ای از تصور بیرجند
+        در آینده قرار دهیم؛ مثلاً خیابان‌های مدرن، ساختمان‌های جدید،
+        فضای سبز بیشتر و فناوری‌های آینده.
+    </p>
+</section>
+
+
+<footer>
+    <p>© 2026 بیرجند من | معرفی شهر بیرجند</p>
+</footer>
+
+</body>
+</html>
