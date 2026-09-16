@@ -62,6 +62,8 @@ footer{background:#0b2537;color:#fff;text-align:center;padding:25px}footer small
 .ai-suggestions{display:flex;gap:8px;flex-wrap:wrap;padding:0 15px 15px;background:#fff}
 .ai-suggestion{border:1px solid #cbdde6;background:#f6fbfd;border-radius:999px;padding:7px 12px;cursor:pointer;font:inherit}
 .ai-note{font-size:.82rem;color:#60717b;padding:12px 20px;background:#f9fbfc;border-top:1px solid #e8eef2}
+
+.history-wrap,.foods-wrap{max-width:1100px;margin:auto}.timeline{display:grid;gap:18px}.timeline-item{background:#fff;border-right:6px solid #187d83;border-radius:16px;padding:20px 22px;box-shadow:0 7px 24px #0000000d}.timeline-item h3{color:#123b5d;margin-bottom:7px}.timeline-item p{color:#4b5964}.food-card{background:#fff;border-radius:18px;padding:24px;box-shadow:0 7px 24px #00000012}.food-card h3{color:#14757d;margin-bottom:8px}.food-card p{color:#4b5964}.food-note{max-width:1100px;margin:22px auto 0;padding:14px 18px;background:#eef7fb;border-radius:14px;color:#4b5964;font-size:14px}
 @media(max-width:600px){.ai-msg{max-width:90%}.ai-input-row{flex-direction:column}.ai-send{height:45px}}
 
 </style>
@@ -69,13 +71,21 @@ footer{background:#0b2537;color:#fff;text-align:center;padding:25px}footer small
 <body>
 <header>
 <div class="logo">🌆 بیرجند من</div>
-<nav><a href="#home">خانه</a><a href="#places">دیدنی‌ها</a><a href="#streets">خیابان‌ها</a><a href="#future">۲۰ سال آینده</a></nav>
+<nav><a href="#home">خانه</a><a href="#history">تاریخچه</a><a href="#places">دیدنی‌ها</a><a href="#foods">غذاهای محلی</a><a href="#streets">خیابان‌ها</a><a href="#future">۲۰ سال آینده</a></nav>
 </header>
 
 <section class="hero" id="home"><div class="hero-box"><h1>به بیرجند خوش آمدید 🌹</h1><p>شهری تاریخی در قلب خراسان جنوبی</p><a class="btn" href="#places">دیدنی‌های بیرجند</a></div></section>
 
 <section><div class="title"><h2>درباره بیرجند</h2><p>آشنایی کوتاه با شهر</p></div>
 <div class="about"><p>بیرجند مرکز استان خراسان جنوبی است و مجموعه‌ای از بناهای تاریخی، باغ‌های ایرانی، جاذبه‌های طبیعی و بافت‌های قدیمی را در خود جای داده است. در این سایت می‌توانیم عکس‌ها و اطلاعات بیشتری از شهر را به مرور اضافه کنیم.</p></div></section>
+
+<section id="history"><div class="title"><h2>📜 تاریخچه بیرجند</h2><p>نگاهی کوتاه به گذشته و شکل‌گیری شهر</p></div>
+<div class="history-wrap"><div class="timeline">
+<div class="timeline-item"><h3>بیرجند در منطقه قهستان</h3><p>بیرجند در منطقه تاریخی قهستان قرار دارد. منابع تاریخی، نام این شهر را در نوشته‌های جغرافیایی سده‌های میانه ثبت کرده‌اند و آن را از شهرهای مهم این ناحیه دانسته‌اند.</p></div>
+<div class="timeline-item"><h3>مرکز اداری و بازرگانی جنوب خراسان</h3><p>بیرجند در دوره‌های بعدی به یکی از مراکز اداری و بازرگانی مهم جنوب خراسان تبدیل شد و ارتباطات تجاری به رشد شهر کمک کرد.</p></div>
+<div class="timeline-item"><h3>شوکتیه و آموزش نوین</h3><p>مدرسه شوکتیه از بناهای مهم آموزشی شهر است. در اوایل قرن چهاردهم هجری شمسی، این مجموعه به مدرسه‌ای نوین تبدیل شد و در تاریخ آموزش بیرجند نقش مهمی پیدا کرد.</p></div>
+<div class="timeline-item"><h3>بیرجند امروز</h3><p>امروز بیرجند مرکز استان خراسان جنوبی است و در کنار بافت تاریخی، باغ‌ها و بناهای قدیمی، شهری دانشگاهی و در حال توسعه به شمار می‌آید.</p></div>
+</div><div class="food-note">منبع تاریخی این بخش: دانشنامه ایرانیکا و منابع معرفی مدرسه شوکتیه. برای مطالب دقیق‌تر می‌توانیم در نسخه بعدی یک صفحه کامل درباره تاریخ بیرجند اضافه کنیم.</div></div></section>
 
 <section id="places"><div class="title"><h2>📍 جاهای دیدنی بیرجند</h2><p>چند جاذبه شناخته‌شده شهر و اطراف آن</p></div>
 <div class="cards">
@@ -93,6 +103,13 @@ footer{background:#0b2537;color:#fff;text-align:center;padding:25px}footer small
 <article class="card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/BirjandShokatiyeSchool.jpg?width=1000" alt="مدرسه شوکتیه بیرجند" loading="lazy"><div class="card-content"><h3>🏘️ بافت تاریخی شهر</h3><p>محله‌ها و بناهای قدیمی بیرجند بخش مهمی از هویت معماری و فرهنگی شهر را تشکیل می‌دهند.</p><div class="source">عکس: Wikimedia Commons</div></div></article>
 
 </div></section>
+
+<section id="foods" class="street"><div class="title"><h2>🍲 غذاهای محلی بیرجند</h2><p>چند غذای سنتی و شناخته‌شده خراسان جنوبی</p></div>
+<div class="foods-wrap"><div class="cards">
+<article class="food-card"><h3>🍆 قروت بادمجان</h3><p>یکی از غذاهای شناخته‌شده بیرجند است که با قروت یا کشک محلی تهیه می‌شود و معمولاً در کنار بادمجان سرو می‌شود. رنگ بنفش قروت از ویژگی‌های جالب این غذای محلی است.</p></article>
+<article class="food-card"><h3>🥣 اشکنه بلغور شیر</h3><p>از غذاهای سنتی منطقه است که با بلغور شیر تهیه می‌شود و در منابع معرفی غذاهای محلی بیرجند از آن نام برده شده است.</p></article>
+<article class="food-card"><h3>🥛 قروت بیرجندی</h3><p>قروت یکی از غذاهای محلی استان خراسان جنوبی است که با قروت، گردو، پیاز و ادویه تهیه می‌شود و می‌تواند با نان یا خوراک‌هایی مانند بادمجان و سیب‌زمینی سرو شود.</p></article>
+</div><div class="food-note">برای آشنایی با فرهنگ غذایی منطقه، زعفران و زرشک نیز از محصولات شناخته‌شده خراسان جنوبی هستند. منبع نمونه برای قروت و غذاهای محلی: منابع معرفی غذاهای بیرجند.</div></div></section>
 
 <section class="street" id="streets"><div class="title"><h2>🛣️ خیابان‌های بیرجند</h2><p>عکس شهر و توضیح درباره خیابان‌ها</p></div>
 <div class="street-box"><img src="birjand-street.jpg" alt="خیابانی در شهر بیرجند"><p>این عکس نمایی از یکی از خیابان‌های بیرجند را نشان می‌دهد. می‌توانیم برای خیابان‌های مختلف شهر، عکس و توضیحات جداگانه اضافه کنیم.</p></div></section>
@@ -141,7 +158,7 @@ footer{background:#0b2537;color:#fff;text-align:center;padding:25px}footer small
   <p>این وب‌سایت به‌مرور تکمیل و امکانات و مطالب جدید به آن اضافه خواهد شد.</p>
 </section>
 
-<footer><p>© 2026 بیرجند من | معرفی شهر بیرجند</p><small>تصاویر جاذبه‌ها از Wikimedia Commons و با مجوزهای درج‌شده در صفحات تصاویر استفاده شده‌اند.</small></footer>
+<footer><p>© 2026 بیرجند من | معرفی شهر بیرجند</p><small>تصاویر جاذبه‌ها از Wikimedia Commons و با مجوزهای درج‌شده در صفحات تصاویر استفاده شده‌اند. | مطالب تاریخی و غذایی با استفاده از منابع معرفی‌شده در صفحه تدوین شده‌اند.</small></footer>
 
 <script>
 const input=document.getElementById("photoInput"),preview=document.getElementById("preview"),previewWrap=document.getElementById("previewWrap"),futureBtn=document.getElementById("futureBtn"),statusBox=document.getElementById("status"),result=document.getElementById("result"),canvas=document.getElementById("futureCanvas"),ctx=canvas.getContext("2d");
