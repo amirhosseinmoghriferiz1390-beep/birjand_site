@@ -3,8 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="بیرجند من؛ معرفی جاهای دیدنی، خیابان‌ها و آینده شهر بیرجند">
-<title>بیرجند من | معرفی شهر بیرجند</title>
+<meta name="description" content="بیرجند من؛ معرفی شهر بیرجند، جاهای دیدنی، خیابان‌ها، جاذبه‌های گردشگری و نگاهی به آینده بیرجند.">
+<meta name="robots" content="index, follow">
+<meta name="keywords" content="بیرجند, شهر بیرجند, جاهای دیدنی بیرجند, جاذبه های گردشگری بیرجند, گردشگری بیرجند">
+<meta property="og:title" content="بیرجند من | معرفی شهر بیرجند">
+<meta property="og:description" content="معرفی شهر بیرجند، جاهای دیدنی، خیابان‌ها و جاذبه‌های گردشگری بیرجند.">
+<meta property="og:type" content="website">
+<title>بیرجند من | معرفی شهر بیرجند، جاهای دیدنی و گردشگری</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
 body{font-family:Tahoma,Arial,sans-serif;background:#f5f7fa;color:#17212b;line-height:1.9}
@@ -38,6 +43,26 @@ footer{background:#0b2537;color:#fff;text-align:center;padding:25px}footer small
 }
 .development-notice strong{font-size:1.05rem}
 .development-notice p{margin:7px 0 0;opacity:.85}
+
+
+/* دستیار هوشمند بیرجند */
+.ai-section{padding:70px 20px;background:linear-gradient(180deg,#eef7fb,#f8fbfd)}
+.ai-box{max-width:900px;margin:auto;background:#fff;border-radius:24px;box-shadow:0 12px 35px rgba(0,0,0,.10);overflow:hidden;border:1px solid #dceaf1}
+.ai-head{padding:22px 24px;background:linear-gradient(135deg,#123b5d,#1d6d8f);color:#fff}
+.ai-head h2{margin:0 0 4px;font-size:1.5rem}
+.ai-head p{margin:0;opacity:.9;font-size:.95rem}
+.ai-chat{height:390px;overflow:auto;padding:20px;background:#f7fafc}
+.ai-msg{max-width:78%;padding:12px 15px;border-radius:18px;margin:10px 0;line-height:1.8;white-space:pre-wrap}
+.ai-msg.bot{background:#fff;border:1px solid #e2e8ee;margin-left:auto}
+.ai-msg.user{background:#dff1fb;margin-right:auto}
+.ai-input-row{display:flex;gap:10px;padding:15px;border-top:1px solid #e5edf2;background:#fff}
+.ai-input{flex:1;border:1px solid #cbd8e0;border-radius:14px;padding:12px 14px;font:inherit;outline:none}
+.ai-input:focus{border-color:#3183a7}
+.ai-send{border:0;border-radius:14px;padding:0 20px;background:#176487;color:#fff;font:inherit;cursor:pointer}
+.ai-suggestions{display:flex;gap:8px;flex-wrap:wrap;padding:0 15px 15px;background:#fff}
+.ai-suggestion{border:1px solid #cbdde6;background:#f6fbfd;border-radius:999px;padding:7px 12px;cursor:pointer;font:inherit}
+.ai-note{font-size:.82rem;color:#60717b;padding:12px 20px;background:#f9fbfc;border-top:1px solid #e8eef2}
+@media(max-width:600px){.ai-msg{max-width:90%}.ai-input-row{flex-direction:column}.ai-send{height:45px}}
 
 </style>
 </head>
@@ -83,6 +108,34 @@ footer{background:#0b2537;color:#fff;text-align:center;padding:25px}footer small
 </div></div></section>
 
 
+
+<section class="ai-section" id="ai-assistant">
+  <div class="title">
+    <h2>🤖 دستیار هوشمند بیرجند</h2>
+    <p>سؤالت درباره بیرجند را بپرس</p>
+  </div>
+  <div class="ai-box">
+    <div class="ai-head">
+      <h2>دستیار بیرجند</h2>
+      <p>نسخه اولیه — پاسخ‌ها بر اساس اطلاعات موجود در همین سایت</p>
+    </div>
+    <div class="ai-chat" id="aiChat" aria-live="polite">
+      <div class="ai-msg bot">سلام! 👋 من دستیار بیرجند هستم.
+می‌توانی درباره جاهای دیدنی، بند دره، مدرسه شوکتیه یا اطلاعات همین سایت از من سؤال کنی.</div>
+    </div>
+    <div class="ai-suggestions">
+      <button class="ai-suggestion" type="button">جاهای دیدنی بیرجند کجاست؟</button>
+      <button class="ai-suggestion" type="button">درباره بند دره بگو</button>
+      <button class="ai-suggestion" type="button">مدرسه شوکتیه چیست؟</button>
+    </div>
+    <div class="ai-input-row">
+      <input class="ai-input" id="aiInput" type="text" placeholder="مثلاً: درباره بند دره بگو..." autocomplete="off">
+      <button class="ai-send" id="aiSend" type="button">ارسال</button>
+    </div>
+    <div class="ai-note">ℹ️ این چت برای هوش مصنوعی واقعی آماده شده است. برای فعال شدن، سرور /api/chat باید راه‌اندازی شود؛ کلید API فقط روی سرور نگهداری می‌شود و نباید داخل GitHub قرار بگیرد.</div>
+  </div>
+</section>
+
 <section class="development-notice" aria-label="وضعیت توسعه سایت">
   <strong>🚧 سایت همچنان در حال توسعه است</strong>
   <p>این وب‌سایت به‌مرور تکمیل و امکانات و مطالب جدید به آن اضافه خواهد شد.</p>
@@ -95,6 +148,64 @@ const input=document.getElementById("photoInput"),preview=document.getElementByI
 let selectedImage=null;
 input.addEventListener("change",()=>{const file=input.files[0];if(!file)return;if(!file.type.startsWith("image/")){statusBox.textContent="لطفاً فقط یک فایل تصویری انتخاب کن.";return}const reader=new FileReader();reader.onload=e=>{preview.src=e.target.result;previewWrap.style.display="block";futureBtn.disabled=false;result.style.display="none";statusBox.textContent="عکس آماده است. حالا روی دکمه ساخت تصویر آینده بزن.";selectedImage=new Image();selectedImage.src=e.target.result};reader.readAsDataURL(file)});
 futureBtn.addEventListener("click",()=>{if(!selectedImage)return;statusBox.textContent="در حال ساخت تصویر مفهومی آینده...";setTimeout(()=>{const maxW=1100,scale=Math.min(1,maxW/selectedImage.naturalWidth);canvas.width=Math.round(selectedImage.naturalWidth*scale);canvas.height=Math.round(selectedImage.naturalHeight*scale);ctx.clearRect(0,0,canvas.width,canvas.height);ctx.drawImage(selectedImage,0,0,canvas.width,canvas.height);ctx.fillStyle="rgba(20,90,120,.18)";ctx.fillRect(0,0,canvas.width,canvas.height);const horizon=canvas.height*.58;ctx.fillStyle="rgba(210,235,240,.72)";for(let i=0;i<12;i++){const x=(i/12)*canvas.width,w=canvas.width/18,h=45+(i%5)*22;ctx.fillRect(x,horizon-h,w,h);ctx.fillStyle="rgba(30,100,125,.75)";for(let y=horizon-h+10;y<horizon-5;y+=16)ctx.fillRect(x+6,y,w-12,6);ctx.fillStyle="rgba(210,235,240,.72)"}ctx.fillStyle="rgba(20,125,75,.75)";for(let i=0;i<16;i++){const x=(i/16)*canvas.width,y=horizon+35;ctx.beginPath();ctx.arc(x,y,16+(i%3)*4,0,Math.PI*2);ctx.fill()}ctx.fillStyle="rgba(45,55,65,.55)";ctx.beginPath();ctx.moveTo(canvas.width*.35,canvas.height);ctx.lineTo(canvas.width*.46,horizon);ctx.lineTo(canvas.width*.54,horizon);ctx.lineTo(canvas.width*.68,canvas.height);ctx.closePath();ctx.fill();ctx.fillStyle="rgba(5,30,45,.78)";ctx.fillRect(0,0,canvas.width,70);ctx.fillStyle="#fff";ctx.font="bold 30px Tahoma";ctx.textAlign="center";ctx.fillText("بیرجند در ۲۰ سال آینده — تصویر مفهومی",canvas.width/2,46);result.style.display="block";statusBox.textContent="تصویر مفهومی آماده شد.";result.scrollIntoView({behavior:"smooth",block:"center"})},700)});
+
+
+// دستیار هوش مصنوعی واقعی — درخواست‌ها به سرور امن /api/chat فرستاده می‌شوند.
+// کلید API هرگز نباید داخل این فایل یا GitHub قرار بگیرد.
+const aiChat=document.getElementById("aiChat");
+const aiInput=document.getElementById("aiInput");
+const aiSend=document.getElementById("aiSend");
+const aiSuggestions=document.querySelectorAll(".ai-suggestion");
+
+function addAiMessage(text, who){
+  const div=document.createElement("div");
+  div.className="ai-msg " + who;
+  div.textContent=text;
+  aiChat.appendChild(div);
+  aiChat.scrollTop=aiChat.scrollHeight;
+  return div;
+}
+
+async function sendAi(){
+  const q=aiInput.value.trim();
+  if(!q) return;
+
+  addAiMessage(q,"user");
+  aiInput.value="";
+  aiSend.disabled=true;
+  const loading=addAiMessage("در حال فکر کردن… ⏳","bot");
+
+  try{
+    const response=await fetch("/api/chat",{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({message:q})
+    });
+
+    const data=await response.json();
+    loading.remove();
+
+    if(!response.ok){
+      throw new Error(data.error || "خطا در ارتباط با دستیار");
+    }
+
+    addAiMessage(data.reply || "پاسخی دریافت نشد.","bot");
+  }catch(error){
+    loading.remove();
+    addAiMessage("فعلاً اتصال دستیار هوشمند برقرار نیست. اگر سایت فقط روی GitHub Pages باشد، باید سرور /api/chat را هم راه‌اندازی کنیم.","bot");
+    console.error(error);
+  }finally{
+    aiSend.disabled=false;
+    aiInput.focus();
+  }
+}
+
+aiSend.addEventListener("click",sendAi);
+aiInput.addEventListener("keydown",e=>{if(e.key==="Enter")sendAi();});
+aiSuggestions.forEach(btn=>btn.addEventListener("click",()=>{
+  aiInput.value=btn.textContent;
+  sendAi();
+}));
 </script>
 </body>
 </html>
